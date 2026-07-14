@@ -1,0 +1,59 @@
+---
+export interface Props {
+  t: {
+    about: {
+      num: string;
+      title: string;
+      titleEm: string;
+      p1: string;
+      p2: string;
+      currentLabel: string;
+      currentRole: string;
+      currentSince: string;
+      eduLabel: string;
+      eduDegree: string;
+      eduSchool: string;
+      basedLabel: string;
+      basedCity: string;
+      basedRemote: string;
+    };
+  };
+}
+
+const { t } = Astro.props;
+
+const p1Html = t.about.p1;
+const p2Html = t.about.p2.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+---
+
+<section class="section container" id="about">
+  <div class="section-num">{t.about.num}</div>
+  <h2 class="section-title">{t.about.title} <em>{t.about.titleEm}</em></h2>
+
+  <div class="about-grid">
+    <div class="about-text">
+      <p set:html={p1Html} />
+      <p set:html={p2Html} />
+    </div>
+
+    <aside class="about-side">
+      <h4>{t.about.currentLabel}</h4>
+      <ul>
+        <li>{t.about.currentRole}</li>
+        <li><time>since</time>{t.about.currentSince}</li>
+      </ul>
+
+      <h4>{t.about.eduLabel}</h4>
+      <ul>
+        <li>{t.about.eduDegree}</li>
+        <li>{t.about.eduSchool}</li>
+      </ul>
+
+      <h4>{t.about.basedLabel}</h4>
+      <ul>
+        <li>{t.about.basedCity}</li>
+        <li>{t.about.basedRemote}</li>
+      </ul>
+    </aside>
+  </div>
+</section>

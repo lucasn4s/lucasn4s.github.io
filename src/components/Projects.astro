@@ -1,0 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import { resolveProjectImage } from '../lib/og-image';
+
+export interface Props {
+  t: {
+    work: { num: string; title: string; titleEm: string };
+  };
+  locale: 'en' | 'pt';
+}
+
+const { t, locale } = Astro.props;
+
+const projects = (await getCollection('projects'))
+  .filter((p) => p.data.locale === locale)
+  .sort((a, b) => a.data.order - b.data.order);
+
+const projectsWithImages = await Promise.all(
+  projects.map(async (p) => {
+    const primaryUrl =
+      p.data.links.find((l) => l.type === 'live')?.url ??
+      p.data.links.find((l) => l.type === 'repo')?.url;
+    const image = await resolveProjectImage(p.data.image, primaryUrl);
+    return { ...p, image };
+  })
+);
+---
+
+<section class="section container" id="work">
+  <div class="section-num">{t.work.num}</div>
+  <h2 class="section-title">{t.work.title} <em>{t.work.titleEm}</em></h2>
+
+  {projectsWithImages.map(async (project) => {
+    const { Content } = await project.render();
+    return (
+      <article class="project">
+        <div class="project-meta">
+          <div class="project-thumb">
+            {project.image ? (
+              <img
+                src={project.image}
+                alt={project.data.title}
+                class="project-img"
+                loading="lazy"
+                decoding="async"
+              />
+            ) : (
+              `[ ${project.data.title} ]`
+            )}
+          </div>
+        </div>
+
+        <div class="project-body">
+          <h3>
+            {project.data.title} <em>{project.data.titleEm}</em>
+          </h3>
+
+          <Content />
+
+          <div class="project-stack">
+            {project.data.stack.map((tech) => (
+              <span>{tech}</span>
+            ))}
+          </div>
+
+          <div class="project-links">
+            {project.data.links.map((link) => {
+              if (link.type === 'confidential') {
+                return <span class="confidential">{link.label}</span>;
+              }
+              return (
+                <a
+                  href={link.url}
+                  class="live"
+                  target={link.url?.startsWith('http') ? '_blank' : undefined}
+                  rel={link.url?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                >{link.label}</a>
+              );
+            })}
+          </div>
+        </div>
+      </article>
+    );
+  })}
+</section>

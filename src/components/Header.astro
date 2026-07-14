@@ -1,0 +1,26 @@
+---
+import LangToggle from './LangToggle.vue';
+
+export interface Props {
+  t: {
+    nav: { work: string; about: string; skills: string; contact: string };
+  };
+  locale: 'en' | 'pt';
+}
+
+const { t, locale } = Astro.props;
+const homeHref = locale === 'en' ? '/' : '/pt/';
+---
+
+<header class="header">
+  <a href={homeHref} class="logo">
+    <img src="/logo.svg" alt="Lucas Barbosa" />
+  </a>
+  <nav class="nav">
+    <a href={`${homeHref}#work`} class="nav-link">{t.nav.work}</a>
+    <a href={`${homeHref}#about`} class="nav-link">{t.nav.about}</a>
+    <a href={`${homeHref}#skills`} class="nav-link">{t.nav.skills}</a>
+    <a href={`${homeHref}#contact`} class="nav-link">{t.nav.contact}</a>
+    <LangToggle currentLocale={locale} client:load />
+  </nav>
+</header>

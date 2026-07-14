@@ -1,0 +1,46 @@
+---
+export interface Props {
+  t: {
+    hero: {
+      eyebrow: string;
+      location: string;
+      headline: string;
+      headlineEm: string;
+      bio: string;
+      currently: string;
+      cta: string;
+    };
+  };
+  locale: 'en' | 'pt';
+}
+
+const { t, locale } = Astro.props;
+
+// Render bio: support **bold** markdown
+const bioHtml = t.hero.bio.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+
+const ctaHref = locale === 'en' ? '/#contact' : '/pt/#contact';
+---
+
+<section class="hero container" id="top">
+  <div class="eyebrow">
+    {t.hero.eyebrow}<span class="dot">·</span>{t.hero.location}
+  </div>
+
+  <h1 class="headline">
+    {t.hero.headline} <em>{t.hero.headlineEm}</em>
+  </h1>
+
+  <p class="bio" set:html={bioHtml} />
+
+  <div class="meta-line">
+    <span class="pulse"></span>
+    {t.hero.currently}
+  </div>
+
+  <a href={ctaHref} class="cta">
+    {t.hero.cta} <span class="arrow">→</span>
+  </a>
+</section>
+
+<div class="scroll-cue">scroll</div>

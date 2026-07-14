@@ -1,0 +1,28 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import About from '../../components/About.astro';
+import Projects from '../../components/Projects.astro';
+import Skills from '../../components/Skills.astro';
+import Contact from '../../components/Contact.astro';
+import Footer from '../../components/Footer.astro';
+
+import pt from '../../i18n/pt.json';
+
+const t = pt;
+---
+
+<BaseLayout title="Lucas Barbosa — Engenheiro Vue.js" description="Engenheiro front-end focado em Vue.js, arquitetura modular e design systems. 7+ anos entregando health tech em escala." locale="pt">
+  <Header t={t} locale="pt" />
+
+  <main>
+    <Hero t={t} locale="pt" />
+    <About t={t} />
+    <Projects t={t} locale="pt" />
+    <Skills t={t} />
+    <Contact t={t} locale="pt" />
+  </main>
+
+  <Footer t={t} locale="pt" />
+</BaseLayout>

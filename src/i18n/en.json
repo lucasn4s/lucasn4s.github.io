@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "work": "Work",
+    "about": "About",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "eyebrow": "Front-End Engineer",
+    "location": "Petrolina, PE / Remote",
+    "headline": "Vue.js engineer, 7 years shipping",
+    "headlineEm": "health tech at scale.",
+    "bio": "**Lucas Barbosa** — front-end engineer focused on Vue.js, modular architecture, and design systems. Currently scaling a Vue/TypeScript stack across 13+ active products at Sysvale Health Tech.",
+    "currently": "FE @ Sysvale Health Tech — since 2018",
+    "cta": "Get in touch"
+  },
+  "about": {
+    "num": "01 — About",
+    "title": "A bit about",
+    "titleEm": "me.",
+    "p1": "I'm a front-end engineer from Petrolina, working at Sysvale Health Tech in Juazeiro since 2018 — first as an intern, now helping lead the front-end architecture. I came in curious and stayed because the problems keep getting interesting.",
+    "p2": "I work mostly with Vue 2/3, TypeScript, and Cuida — an open-source design system I helped build from its early stages, now shared across 10+ products. I also designed and introduced a standardized Vue 3 project architecture that has been successfully adopted as the baseline for over 10 new applications.",
+    "currentLabel": "Currently",
+    "currentRole": "FE @ Sysvale Health Tech",
+    "currentSince": "2018",
+    "eduLabel": "Education",
+    "eduDegree": "Computer Eng.",
+    "eduSchool": "UNIVASF · 2020",
+    "basedLabel": "Based in",
+    "basedCity": "Petrolina, PE — UTC−3",
+    "basedRemote": "Open to remote"
+  },
+  "work": {
+    "num": "02 — Selected Work",
+    "title": "Things I've",
+    "titleEm": "built."
+  },
+  "skills": {
+    "num": "03 — Skills",
+    "title": "What I work",
+    "titleEm": "with.",
+    "note": "Levels are vibes-based, not certifications. If you want to see something specific in action, it's probably in the work section above.",
+    "groups": {
+      "core": "Core Stack",
+      "libs": "Frameworks & libs",
+      "mobile": "Mobile",
+      "tooling": "Tooling & AI"
+    }
+  },
+  "contact": {
+    "num": "04 — Contact",
+    "title": "Let's",
+    "titleEm": "talk.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copy": "© 2026 Lucas Barbosa do Nascimento",
+    "build": "last build"
+  }
+}

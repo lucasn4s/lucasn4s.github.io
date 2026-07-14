@@ -1,0 +1,14 @@
+---
+export interface Props {
+  t: { footer: { copy: string; build: string } };
+  locale: 'en' | 'pt';
+}
+
+const { t, locale } = Astro.props;
+const buildDate = new Date().toISOString().slice(0, 10);
+---
+
+<footer class="footer">
+  <div>{t.footer.copy}</div>
+  <div class="build-time">{t.footer.build} · {buildDate}</div>
+</footer>

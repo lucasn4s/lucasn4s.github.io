@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Fundo sutil off-white do seu site -->
+  <rect width="32" height="32" rx="6" fill="#fbfbfa" />
+  
+  <!-- Letra L minimalista e robusta -->
+  <path d="M 11 8 L 11 22 L 21 22" 
+        fill="none" 
+        stroke="#111111" 
+        stroke-width="4" 
+        stroke-linecap="square" 
+        stroke-linejoin="miter" />
+</svg>

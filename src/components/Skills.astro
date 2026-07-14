@@ -1,0 +1,83 @@
+---
+export interface Props {
+  t: {
+    skills: {
+      num: string;
+      title: string;
+      titleEm: string;
+      note: string;
+      groups: { core: string; libs: string; mobile: string; tooling: string };
+    };
+  };
+}
+
+const { t } = Astro.props;
+
+const groups = [
+  {
+    title: t.skills.groups.core,
+    items: [
+      { name: 'Vue 3', level: 'daily' },
+      { name: 'Vue 2', level: 'daily' },
+      { name: 'TypeScript', level: 'daily' },
+      { name: 'JavaScript (ES6+)', level: 'daily' },
+      { name: 'Pinia', level: 'daily' },
+      { name: 'Vite', level: 'daily' },
+      { name: 'Laravel', level: 'often' },
+      { name: 'Vitest', level: 'often' },
+      { name: 'Vuex', level: 'often' },
+    ],
+  },
+  {
+    title: t.skills.groups.libs,
+    items: [
+      { name: 'Nuxt', level: null },
+      { name: 'Next.js', level: null },
+      { name: 'Node.js', level: null },
+      { name: 'Storybook', level: null },
+    ],
+  },
+  {
+    title: t.skills.groups.mobile,
+    items: [
+      { name: 'React Native', level: null },
+      { name: 'Ionic Framework', level: null },
+      { name: 'Flutter', level: 'basic' },
+    ],
+  },
+  {
+    title: t.skills.groups.tooling,
+    items: [
+      { name: 'Git / GitHub / GitLab', level: null },
+      { name: 'CI/CD (GitLab)', level: null },
+      { name: 'Docker', level: null },
+      { name: 'Webpack', level: null },
+      { name: 'Figma → code', level: null },
+      { name: 'AI agents (OpenCode, MCP)', level: null, highlight: true },
+    ],
+  },
+];
+---
+
+<section class="section container" id="skills">
+  <div class="section-num">{t.skills.num}</div>
+  <h2 class="section-title">{t.skills.title} <em>{t.skills.titleEm}</em></h2>
+
+  <div class="skills-grid">
+    {groups.map((group) => (
+      <div class="skill-group">
+        <h4>{group.title}</h4>
+        <ul>
+          {group.items.map((item) => (
+            <li class={item.highlight ? 'highlight' : ''}>
+              <span>{item.name}</span>
+              {item.level && <span class="level">{item.level}</span>}
+            </li>
+          ))}
+        </ul>
+      </div>
+    ))}
+  </div>
+
+  <p class="skills-note">{t.skills.note}</p>
+</section>

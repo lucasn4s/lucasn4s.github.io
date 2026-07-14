@@ -1,0 +1,62 @@
+{
+  "nav": {
+    "work": "Trabalho",
+    "about": "Sobre",
+    "skills": "Skills",
+    "contact": "Contato"
+  },
+  "hero": {
+    "eyebrow": "Engenheiro Front-End",
+    "location": "Petrolina, PE / Remoto",
+    "headline": "Engenheiro Vue.js, 7 anos entregando",
+    "headlineEm": "health tech em escala.",
+    "bio": "**Lucas Barbosa** — engenheiro front-end focado em Vue.js, arquitetura modular e design systems. Atualmente escalando um stack Vue/TypeScript em 13+ produtos ativos na Sysvale Health Tech.",
+    "currently": "Front-End @ Sysvale Health Tech — desde 2018",
+    "cta": "Fala comigo!"
+  },
+  "about": {
+    "num": "01 — Sobre",
+    "title": "Um pouco sobre",
+    "titleEm": "mim.",
+    "p1": "Sou engenheiro front-end de Petrolina, trabalhando na Sysvale Health Tech em Juazeiro desde 2018 — primeiro como estagiário, hoje ajudando a liderar a arquitetura front-end. Entrei curioso e fiquei porque os problemas não param de ficar interessantes.",
+    "p2": "Trabalho majoritariamente com Vue 2/3, TypeScript e **Cuida** — um design system open-source que ajudei a construir desde os estágios iniciais, hoje compartilhado entre 10+ produtos. Também desenhei e introduzi uma arquitetura padronizada de projetos Vue 3 que foi adotada com sucesso como base para mais de 10 novas aplicações.",
+    "currentLabel": "Atualmente",
+    "currentRole": "Front-End @ Sysvale Health Tech",
+    "currentSince": "2018",
+    "eduLabel": "Formação",
+    "eduDegree": "Eng. da Computação",
+    "eduSchool": "UNIVASF · 2020",
+    "basedLabel": "Localização",
+    "basedCity": "Petrolina, PE — UTC−3",
+    "basedRemote": "Aberto a remoto"
+  },
+  "work": {
+    "num": "02 — Trabalhos selecionados",
+    "title": "Coisas que eu",
+    "titleEm": "construí."
+  },
+  "skills": {
+    "num": "03 — Skills",
+    "title": "Com o que eu",
+    "titleEm": "trabalho.",
+    "note": "Os níveis são vibes, não certificações. Se quiser ver algo específico em ação, provavelmente está na seção de trabalhos acima.",
+    "groups": {
+      "core": "Stack principal",
+      "libs": "Frameworks & libs",
+      "mobile": "Mobile",
+      "tooling": "Ferramentas & IA"
+    }
+  },
+  "contact": {
+    "num": "04 — Contato",
+    "title": "Vamos",
+    "titleEm": "conversar.",
+    "email": "Email",
+    "github": "GitHub",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "copy": "© 2026 Lucas Barbosa do Nascimento",
+    "build": "último build"
+  }
+}

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 30" width="160" height="30">
+  <!-- Texto "lucas" em Sans-Serif moderna e limpa -->
+  <text x="0" y="21" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" 
+        font-size="19" 
+        font-weight="700" 
+        fill="#111111" 
+        letter-spacing="-0.5px">
+    lucas
+  </text>
+  
+  <!-- "barbosa" com peso mais leve (light/regular) para dar contraste tipográfico -->
+  <text x="50" y="21" 
+        font-family="-apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif" 
+        font-size="19" 
+        font-weight="400" 
+        fill="#666666" 
+        letter-spacing="-0.5px">
+    barbosa
+  </text>
+
+  <!-- Ponto final minimalista (accent color discreto) -->
+  <circle cx="127" cy="19" r="2.5" fill="#111111" />
+</svg>
