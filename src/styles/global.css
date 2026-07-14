@@ -489,7 +489,7 @@ img, svg { display: block; max-width: 100%; }
 
 @media (max-width: 900px) {
   :root {
-    --gutter: 32px;
+    --gutter: 40px;
     --section-pad-y: 80px;
     --section-gap: 48px;
   }
