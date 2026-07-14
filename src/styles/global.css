@@ -65,7 +65,10 @@ img, svg { display: block; max-width: 100%; }
   padding-right: var(--gutter);
 }
 
-.section { padding: var(--section-pad-y) 0; }
+.section {
+  padding-top: var(--section-pad-y);
+  padding-bottom: var(--section-pad-y);
+}
 
 .section-num {
   font-family: var(--font-mono);
@@ -153,7 +156,8 @@ img, svg { display: block; max-width: 100%; }
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 96px 0 64px;
+  padding-top: 96px;
+  padding-bottom: 64px;
 }
 
 .eyebrow {
