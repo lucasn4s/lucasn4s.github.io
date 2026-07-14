@@ -489,7 +489,7 @@ img, svg { display: block; max-width: 100%; }
 
 @media (max-width: 900px) {
   :root {
-    --gutter: 24px;
+    --gutter: 32px;
     --section-pad-y: 80px;
     --section-gap: 48px;
   }
@@ -499,6 +499,8 @@ img, svg { display: block; max-width: 100%; }
   .project { grid-template-columns: 1fr; gap: 32px; }
   .skills-grid { grid-template-columns: 1fr; gap: 48px; }
   .scroll-cue { display: none; }
+  .contact-links a { flex-wrap: wrap; row-gap: 4px; }
+  .contact-links a span.handle { min-width: 0; overflow-wrap: anywhere; }
 }
 
 @media (prefers-reduced-motion: reduce) {
